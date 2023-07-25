@@ -5,6 +5,7 @@
     color: $clr-dark;
     font-weight: 550;
     position: relative;
+    border-radius: 1rem;
     &.bg{
         &--primary{
             background: $clr-primary;
@@ -21,6 +22,8 @@
                 top: 0;
                 left: 0;
                 z-index: -1;
+                transition: .5s ease-in-out;
+                border-radius: 1rem;
             }
             &:hover::before{
                 width: 100%;
@@ -47,6 +50,8 @@
                 top: 0;
                 left: 0;
                 z-index: -1;
+                transition: .5s ease-in-out;
+                border-radius: 1rem;
             }
             &:hover::before{
                 width: 100%;

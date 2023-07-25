@@ -12,3 +12,13 @@ drop.forEach((link) => {
         link.querySelector("i").classList.toggle("open");
     });
 });
+
+const kamote = document.querySelector(".header");
+window.addEventListener("scroll", () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 500) {
+        kamote.classList.add("white");
+    } else {
+        kamote.classList.remove("white");
+    }
+});

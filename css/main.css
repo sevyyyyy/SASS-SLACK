@@ -20,6 +20,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.4;
   font-family: "Raleway", sans-serif;
+  height: 10000px;
 }
 
 .container {
@@ -34,6 +35,18 @@ body {
   position: relative;
   position: fixed;
   width: 100%;
+}
+.header .container {
+  transition: 1s ease;
+}
+.header.white {
+  background: transparent;
+}
+.header.white .container {
+  background: blue;
+  border-radius: 3rem;
+  margin-top: 5rem;
+  transition: 2s ease;
 }
 .header__wrapper {
   display: flex;
@@ -166,6 +179,40 @@ body {
   .header__nav {
     display: none;
   }
+  .header .branding ul {
+    display: flex;
+    gap: 2rem;
+    margin-left: 5rem;
+  }
+  .header .branding ul li {
+    transition: 0.5s ease;
+  }
+  .header .branding ul li a {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .header .branding ul li a i {
+    font-size: 1rem;
+  }
+  .header .branding ul li:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+  }
+}
+.header__actions .toggle__menu {
+  display: none;
+}
+.header__actions__btn {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.header__actions__btn a.sign {
+  color: hsl(0, 0%, 100%);
 }
 
 .btn {
@@ -175,6 +222,7 @@ body {
   color: hsl(0, 0%, 0%);
   font-weight: 550;
   position: relative;
+  border-radius: 1rem;
 }
 .btn.bg--primary {
   background: hsl(293.51, 54.41%, 26.67%);
@@ -192,6 +240,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  transition: 0.5s ease-in-out;
+  border-radius: 1rem;
 }
 .btn.bg--primary:hover::before {
   width: 100%;
@@ -218,6 +268,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  transition: 0.5s ease-in-out;
+  border-radius: 1rem;
 }
 .btn.bg--light:hover::before {
   width: 100%;
