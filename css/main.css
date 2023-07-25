@@ -32,6 +32,8 @@ body {
 .header {
   background: hsl(293.51, 54.41%, 26.67%);
   position: relative;
+  position: fixed;
+  width: 100%;
 }
 .header__wrapper {
   display: flex;
@@ -59,23 +61,23 @@ body {
   top: 0%;
   right: -100rem;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   transition: 0.5s ease;
 }
 .header__nav img {
   width: 15rem;
   padding: 2rem;
 }
-.header__nav ul {
+.header__nav ul.nav {
   display: flex;
   flex-direction: column;
   margin-top: 6rem;
   margin-bottom: 5rem;
 }
-.header__nav ul li {
+.header__nav ul.nav li {
   padding: 2.5rem;
 }
-.header__nav ul li a {
+.header__nav ul.nav li a {
   color: hsl(0, 0%, 0%);
   font-size: 2rem;
   font-weight: 600;
@@ -83,8 +85,27 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.header__nav ul li a i {
+.header__nav ul.nav li a i {
   color: hsl(0, 0%, 0%);
+  transition: 0.5s ease;
+}
+.header__nav ul.nav li a i.open {
+  transform: rotate(90deg);
+  transition: 0.5s ease;
+}
+.header__nav ul.nav ul.drop {
+  background: red;
+  margin: 0 3rem;
+  max-height: 0rem;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.header__nav ul.nav ul.drop li a {
+  font-size: 1.5rem;
+}
+.header__nav ul.nav ul.drop.open {
+  max-height: 50rem;
+  transition: 0.5s ease;
 }
 .header__nav__btn {
   display: flex;
@@ -124,19 +145,27 @@ body {
 .header__actions .toggle__menu span:nth-child(2) {
   margin: 0.3rem 0;
 }
+.header__actions .toggle__menu.open span {
+  background-color: hsl(0, 0%, 0%);
+}
 .header__actions .toggle__menu.open span:first-child {
-  transform: translateY(9px) rotate(225deg);
+  transform: translateY(9px) rotate(1225deg);
   transition: 0.5s ease;
 }
 .header__actions .toggle__menu.open span:nth-child(2) {
   opacity: 0;
 }
 .header__actions .toggle__menu.open span:last-child {
-  transform: translateY(-1px) rotate(-45deg);
+  transform: translateY(-1px) rotate(-145deg);
   transition: 0.5 ease;
 }
 .header__actions__btn {
   display: none;
+}
+@media screen and (min-width: 940px) {
+  .header__nav {
+    display: none;
+  }
 }
 
 .btn {
@@ -145,14 +174,57 @@ body {
   border: 1px solid transparent;
   color: hsl(0, 0%, 0%);
   font-weight: 550;
+  position: relative;
 }
 .btn.bg--primary {
   background: hsl(293.51, 54.41%, 26.67%);
   color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 100%);
 }
+.btn.bg--primary:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.btn.bg--primary:hover::before {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.btn.bg--primary:hover {
+  z-index: 999;
+  border: 1px solid hsl(293.51, 54.41%, 26.67%);
+  color: hsl(293.51, 54.41%, 26.67%);
+}
 .btn.bg--light {
   background: hsl(0, 0%, 100%);
   color: hsl(293.51, 54.41%, 26.67%);
   border: 1px solid hsl(293.51, 54.41%, 26.67%);
+}
+.btn.bg--light:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: hsl(293.51, 54.41%, 26.67%);
+  transform-origin: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.btn.bg--light:hover::before {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.btn.bg--light:hover {
+  z-index: 999;
+  border: 1px solid hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=main.css.map */
