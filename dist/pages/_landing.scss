@@ -1,0 +1,48 @@
+.banner{
+    .container{
+        background-color: $clr-primary;
+    }
+    &__wrapper{
+        margin-top: 10rem;
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        h1{
+            font-size: 4rem;
+            color: $clr-light;
+            
+            span{
+                color: #ECB22E;
+            }
+        }
+        
+        p{
+            font-size: 1.5rem;
+            color: $clr-light;
+            font-weight: 600;
+            width: 40rem;
+            margin-bottom: 2.5rem;
+        }
+        ul{
+            li{
+                a{
+                    margin-bottom: 1rem;
+                    width: 45rem;
+                    img{
+                        width: 2rem;
+                        background-color: $clr-light;
+                    }
+                }
+            }
+        }
+    }
+    &__vid{
+        video{
+            @include imgFit(100%, 100%)
+        }
+    }
+}

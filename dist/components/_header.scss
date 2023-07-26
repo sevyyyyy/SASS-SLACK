@@ -37,16 +37,12 @@
     }
     &__nav{
         position: absolute;
-        background: pink;
+        background: $clr-light;
         top: 0%;
         right: -100rem;
         width: 100%;
         height: 100vh;
         transition: .5s ease;
-        // padding: 2rem;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
         img{
             width: 15rem;
             padding: 2rem;
@@ -76,7 +72,7 @@
                 }
             }
             ul.drop{
-                background: red;
+                background: $clr-light;
                 margin: 0 3rem;
                 max-height: 0rem;
                 overflow: hidden;
@@ -102,10 +98,10 @@
             padding: 2rem;
             bottom: 3rem;
         }
-    &.open{
-        right: 0rem;
-        transition: .5s ease;
-    }
+        &.open{
+            right: 0rem;
+            transition: .5s ease;
+        }
     }
     &__actions{
         display: flex;
@@ -121,6 +117,7 @@
             span{
                 &:nth-child(2){
                     margin: .5rem 0;
+                    display: block;
                 }
                 width: 3rem;
                 height: .2rem;
@@ -140,6 +137,7 @@
                     }
                     &:nth-child(2){
                         opacity: 0;
+                        transition: .5s ease;
                     }
                     &:last-child{
                         transform: translateY(-1px) rotate(-145deg);
@@ -181,17 +179,17 @@
                     }
                 }
             }
-        }
-        &__actions{
-            .toggle__menu{
-                display: none;
-            }
-            &__btn{
-                display: flex;
-                align-items: center;
-                gap: 2rem;
-                a.sign{
-                    color: $clr-light;
+            &__actions{
+                .toggle__menu{
+                    display: none;
+                }
+                &__btn{
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    a.sign{
+                        color: $clr-light;
+                    }
                 }
             }
         }
