@@ -31,6 +31,9 @@
         ul{
             li{
                 a{
+                    span{
+                    
+                    }
                     margin-bottom: 1rem;
                     width: 45rem;
                     img{
@@ -147,3 +150,26 @@
         }
     }
 }
+
+/*BRING*/
+
+.bring{
+    background: $clr-fwhite;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+        &__item{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            video{
+                
+            }
+            &__text{}
+        }
+}
+
