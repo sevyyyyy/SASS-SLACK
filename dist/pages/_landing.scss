@@ -1,9 +1,9 @@
 .banner{
-    .container{
-        background-color: $clr-primary;
-    }
+    background-color: $clr-primary;
+    position: relative;
+    height: 70vh;
     &__wrapper{
-        margin-top: 10rem;
+        margin-top: 8rem;
     }
     &__items{
         display: flex;
@@ -14,18 +14,19 @@
         h1{
             font-size: 4rem;
             color: $clr-light;
-            
             span{
                 color: #ECB22E;
             }
         }
-        
         p{
             font-size: 1.5rem;
             color: $clr-light;
             font-weight: 600;
             width: 40rem;
             margin-bottom: 2.5rem;
+            &:last-child{
+                display: none;
+            }
         }
         ul{
             li{
@@ -33,8 +34,12 @@
                     margin-bottom: 1rem;
                     width: 45rem;
                     img{
-                        width: 2rem;
+                        width: 5rem;
                         background-color: $clr-light;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        border-radius: .5rem;
                     }
                 }
             }
@@ -42,7 +47,105 @@
     }
     &__vid{
         video{
-            @include imgFit(100%, 100%)
+            @include imgFit(100%, 20rem);
+            margin-top: 2.5rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    @include mediaQuery($break-lg){
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        align-items: center;
+        grid-gap: 5rem;
+    }
+    &__items{
+        display: unset;
+        flex-direction: unset;
+        justify-content: unset;
+        text-align: unset;
+        align-items: unset;
+        h1{
+            font-size:6.5rem;
+        }
+        p{
+            width: unset;
+            font-size: 2rem;
+            font-weight: unset;
+            max-width: 56rem;
+            &:last-child{
+                display: unset;
+            }
+        }
+        ul{
+            display: flex;
+            width: unset;
+            li{
+                margin-right: 1rem;
+                
+                a{
+                    width: unset;
+                    width: 30rem;
+                    text-align: center
+                }
+            }
+        }
+    }
+    &__vid{
+        video{
+            @include imgFit(100%, 100%);
+            margin-top: 2.5rem;
+            position: unset;
+        }
+    }
+    }
+
+}
+
+/*TRUST*/
+
+.trust{
+    background-color: #F4EDE4;
+    .container{
+        
+    }
+    &__wrapper{
+
+    }
+    &__text{
+        p{
+            font-weight: 600;
+            text-align: center;
+            margin: 2rem;
+        }
+    }
+    &__items{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        img{
+            @include imgFit(20%, 20%);
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__items{
+            display: unset;
+            display: flex;
+            flex-wrap: unset;
+            flex-direction: row;
+            gap: 5rem;
+            img{
+                @include imgFit(100%, 100%);
+                width: 10rem;
+                &:nth-child(5){
+                    width: 25rem;
+                }
+            }
         }
     }
 }

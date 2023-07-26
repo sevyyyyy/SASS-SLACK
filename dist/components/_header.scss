@@ -3,16 +3,18 @@
     position: relative;
     position: fixed;
     width: 100%;
+    z-index: 999;
     .container{
         transition: 1s ease;
     }
     &.white{
         background: transparent;
         .container{
-            background: blue;
+            background: $clr-primary;
             border-radius: 3rem;
             margin-top: 5rem;
             transition: 2s ease;
+            border: 1px solid $clr-light;
         }
     }
     &__wrapper{
