@@ -317,7 +317,7 @@ body {
 .banner {
   background-color: hsl(293.51, 54.41%, 26.67%);
   position: relative;
-  height: 70vh;
+  height: 700px;
 }
 .banner__wrapper {
   margin-top: 8rem;
@@ -354,11 +354,12 @@ body {
   width: 45rem;
 }
 .banner__items ul li a img {
-  width: 1rem;
+  width: 4rem;
   background-color: hsl(0, 0%, 100%);
   position: absolute;
-  left: 0;
-  top: 0;
+  padding: 0.5rem;
+  left: 0.5rem;
+  top: 0.5rem;
   border-radius: 0.5rem;
 }
 .banner__vid video {
@@ -372,6 +373,9 @@ body {
   left: 0;
 }
 @media screen and (min-width: 940px) {
+  .banner {
+    padding-top: 8rem;
+  }
   .banner__wrapper {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -476,6 +480,12 @@ body {
   flex-direction: column;
   gap: 2.5rem;
 }
+.bring__item video {
+  transform: translateX(-1.5rem);
+}
+.bring__item:nth-child(even) {
+  transform: translateX(1.9rem);
+}
 .bring__text h1 {
-  font-size: 5rem;
+  font-size: 3rem;
 }/*# sourceMappingURL=main.css.map */

@@ -1,7 +1,7 @@
 .banner{
     background-color: $clr-primary;
     position: relative;
-    height: 70vh;
+    height: 700px;
     &__wrapper{
         margin-top: 8rem;
     }
@@ -35,11 +35,12 @@
                     margin-bottom: 1rem;
                     width: 45rem;
                     img{
-                        width: 1rem;
+                        width: 4rem;
                         background-color: $clr-light;
                         position: absolute;
-                        left: 0;
-                        top: 0;
+                        padding: 0.5rem;
+                        left: 0.5rem;
+                        top: 0.5rem;
                         border-radius: .5rem;
                     }
                 }
@@ -56,6 +57,7 @@
         }
     }
     @include mediaQuery($break-lg){
+        padding-top: 8rem;
         &__wrapper{
             display: grid;
             grid-template-columns: 2fr 2fr;
@@ -161,26 +163,33 @@
         flex-direction: column;
         gap: 5rem;
     }
-        &__item{
-            display: flex;
-            flex-direction: column;
-            gap: 2.5rem;
-            video{
 
-                }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        
+        video{
+            transform: translateX(-1.5rem);
+        }
+            &:nth-child(even){
+                transform: translateX(1.9rem);
             }
+    }
 
-            &__text{
-                h1{
-                    font-size: 5rem;
-                    p{
-                        a{
-                            i{
-                            }
-                        }
+    &__text{
+        h1{
+            font-size: 3rem;
+            p{
+                
+                a{
+                    i{
+                        
                     }
                 }
             }
+        }
+    }
 }
 
 //     @include mediaQuery($break-lg)
