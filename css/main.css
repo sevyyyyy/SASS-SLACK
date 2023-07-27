@@ -456,4 +456,23 @@ body {
   .trust__items img:nth-child(5) {
     width: 25rem;
   }
+}
+
+/*BRING*/
+.bring__wrapper {
+  background: hsl(34, 42%, 93%);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.bring__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.bring__item video {
+  transform: translateX(-1.5rem);
+}
+.bring__item video:nth-child(even) {
+  transform: unset;
 }/*# sourceMappingURL=main.css.map */
