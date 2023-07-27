@@ -55,55 +55,56 @@
             left: 0;
         }
     }
-}
-
     @include mediaQuery($break-lg){
-    &__wrapper{
-        display: grid;
-        grid-template-columns: 2fr 2fr;
-        align-items: center;
-        grid-gap: 5rem;
-    }
-    &__items{
-        display: unset;
-        flex-direction: unset;
-        justify-content: unset;
-        text-align: unset;
-        align-items: unset;
-        h1{
-            font-size:6.5rem;
+        &__wrapper{
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            align-items: center;
+            grid-gap: 5rem;
         }
-        p{
-            width: unset;
-            font-size: 2rem;
-            font-weight: unset;
-            max-width: 56rem;
-            &:last-child{
-                display: unset;
+        &__items{
+            display: unset;
+            flex-direction: unset;
+            justify-content: unset;
+            text-align: unset;
+            align-items: unset;
+            h1{
+                font-size:6.5rem;
             }
-        }
-        ul{
-            display: flex;
-            width: unset;
-            li{
-                margin-right: 1rem;
-                
-                a{
-                    width: unset;
-                    width: 30rem;
-                    text-align: center
+            p{
+                width: unset;
+                font-size: 2rem;
+                font-weight: unset;
+                max-width: 56rem;
+                &:last-child{
+                    display: unset;
+                }
+            }
+            ul{
+                display: flex;
+                width: unset;
+                li{
+                    margin-right: 1rem;
+                    
+                    a{
+                        width: unset;
+                        width: 30rem;
+                        text-align: center
+                    }
                 }
             }
         }
-    }
-    &__vid{
-        video{
-            @include imgFit(100%, 100%);
-            margin-top: 2.5rem;
-            position: unset;
+        &__vid{
+            video{
+                @include imgFit(100%, 100%);
+                margin-top: 2.5rem;
+                position: unset;
+            }
         }
     }
 }
+
+
 
 
 /*TRUST*/

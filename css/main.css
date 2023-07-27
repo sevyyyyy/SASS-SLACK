@@ -346,12 +346,15 @@ body {
 .banner__items p:last-child {
   display: none;
 }
+.banner__items ul li {
+  position: relative;
+}
 .banner__items ul li a {
   margin-bottom: 1rem;
   width: 45rem;
 }
 .banner__items ul li a img {
-  width: 5rem;
+  width: 1rem;
   background-color: hsl(0, 0%, 100%);
   position: absolute;
   left: 0;
@@ -459,6 +462,9 @@ body {
 }
 
 /*BRING*/
+.bring {
+  background: hsl(34, 42%, 93%);
+}
 .bring__wrapper {
   background: hsl(34, 42%, 93%);
   display: flex;
@@ -470,9 +476,6 @@ body {
   flex-direction: column;
   gap: 2.5rem;
 }
-.bring__item video {
-  transform: translateX(-1.5rem);
-}
-.bring__item video:nth-child(even) {
-  transform: unset;
+.bring__text h1 {
+  font-size: 5rem;
 }/*# sourceMappingURL=main.css.map */
