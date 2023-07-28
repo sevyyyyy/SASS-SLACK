@@ -32,7 +32,15 @@ btnRegion.addEventListener('click',()=>{
     btnRegion.nextElementSibling.classList.toggle('active')
 })
 
-btnClose.addEventListener('click',()=>{
+const openModalHandler = () =>{
+    btnRegion.classList.toggle('active')
+    btnRegion.nextElementSibling.classList.toggle('toggle')
+}
+
+const closeModalHandler = () =>{
     modal.classList.toggle('active');
     btnRegion.classList.toggle('active')
-})
+}
+
+btnClose.addEventListener('click',closeModalHandler)
+btnRegion.addEventListener('click',openModalHandler);

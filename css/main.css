@@ -899,7 +899,7 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  background: #4285f4;
+  background: hsl(0, 0%, 100%);
   top: auto;
   left: 0;
   right: 0;
@@ -914,6 +914,16 @@ body {
   background: transparent;
   border: 0 solid transparent;
   font-size: 2.5rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 940px) {
+  .footer__left .modal {
+    border: 1px solid hsl(0, 0%, 0%);
+    max-width: 72rem;
+    height: auto;
+    margin: 0 auto;
+    bottom: 15rem;
+  }
 }
 
 /*PAGES*/
