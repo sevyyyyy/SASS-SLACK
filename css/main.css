@@ -889,13 +889,10 @@ body {
   padding: 2rem 0;
   font-weight: bold;
 }
-.footer__left ul li:p {
-  font-weight: unset;
-}
-.footer__left ul li a {
+.footer__left ul a {
   color: hsl(0, 0%, 0%);
 }
-.footer__left .modal {
+.footer .modal {
   padding: 2rem;
   overflow-y: auto;
   display: none;
@@ -909,18 +906,30 @@ body {
   bottom: 0;
   z-index: 9999;
 }
-.footer__left .modal.active {
+.footer .modal.active {
   display: block;
 }
-.footer__left .modal button {
+.footer .modal button {
   float: right;
   background: transparent;
   border: 0 solid transparent;
   font-size: 2.5rem;
   cursor: pointer;
 }
+.footer .modal h2 {
+  text-align: center;
+}
+.footer .modal p {
+  text-align: center;
+  font-weight: 100;
+  margin: 1.5rem 0;
+}
+.footer .country {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 @media screen and (min-width: 940px) {
-  .footer__left .modal {
+  .footer .modal {
     border: 1px solid hsl(0, 0%, 0%);
     max-width: 72rem;
     height: auto;
@@ -1168,4 +1177,68 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+/*WORK SECTION*/
+.work {
+  background: hsl(34, 42%, 93%);
+}
+.work .slider__item {
+  height: 40rem;
+  width: 25rem;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+}
+.work .slider__item h5 {
+  font-size: 1.4rem;
+  font-weight: lighter;
+  padding-bottom: 2rem;
+}
+.work .slider__item img {
+  width: 100%;
+}
+.work .slider__item .slider__actions {
+  margin-top: 13rem;
+}
+.work .tns-controls,
+.work button[data-action=stop] {
+  display: none;
+}
+.work .tns-nav {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.work .tns-nav button {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: hsl(0, 0%, 100%);
+  border-radius: 50%;
+  justify-content: center;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.work .tns-nav button:hover,
+.work .tns-nav button.tns-nav-active {
+  position: relative;
+  transition: 0.5s ease-in-out;
+  background: hsl(293.51, 54.41%, 26.67%);
+}
+.work .tns-nav button:hover::before,
+.work .tns-nav button.tns-nav-active:before {
+  content: "";
+  position: absolute;
+  padding: 1rem;
+  top: -0.5rem;
+  left: -0.5rem;
+  border-radius: 50%;
+  border: 1px dashed hsl(293.51, 54.41%, 26.67%);
+}
+.work .tns-nav button:hover {
+  background: hsl(293.51, 54.41%, 26.67%);
+}
+.work .tns-nav button.tns-nav-active {
+  background: hsl(293.51, 54.41%, 26.67%);
 }/*# sourceMappingURL=main.css.map */

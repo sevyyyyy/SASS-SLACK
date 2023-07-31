@@ -49,6 +49,20 @@ const closeOverlay = () =>{
     closeModalHandler();
 }
 
+var slider = tns({
+    container: '.slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    mouseDrag: true,
+    navPosition: "bottom",
+    responsive: {
+        900: {
+            items: 4
+        }
+    }
+})
+
 btnClose.addEventListener('click',closeModalHandler);
 btnRegion.addEventListener('click',openModalHandler);
 overlay.addEventListener('click',closeOverlay);
