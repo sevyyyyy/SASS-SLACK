@@ -10,6 +10,8 @@
 
 <body>
 
+    <div id="overlay"></div>
+    
     <header class="header">
             <div class="container">
                 <div class="header__wrapper">
@@ -162,13 +164,17 @@
                         <li><a href="">Cookie Preferences</a></li>
                         <li><a href="">Contact Us</a></li>
                         <li><a class="region" href="javascript:void(0)">Change Region</a>
-                        <div class="modal" onfocusout="closeModalHandaler">
+
+                        <div class="modal">
                             <button id="closeModal">X</button>
                             <h2>Change Region</h2>
-                        </div>
-                    </li>
+                        <div class="country">
+                            <p>Selecting a different region will change the language and content of slack.com.</p>                            
+                        </div>                               
+                        </div></li>
                     </ul>
                 </div>
+                
                 <div class="footer_right">
 
                 </div>

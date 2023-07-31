@@ -889,6 +889,9 @@ body {
   padding: 2rem 0;
   font-weight: bold;
 }
+.footer__left ul li:p {
+  font-weight: unset;
+}
 .footer__left ul li a {
   color: hsl(0, 0%, 0%);
 }
@@ -924,6 +927,23 @@ body {
     margin: 0 auto;
     bottom: 15rem;
   }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.75;
+}
+#overlay.active {
+  display: block;
 }
 
 /*PAGES*/

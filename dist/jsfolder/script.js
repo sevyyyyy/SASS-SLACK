@@ -26,6 +26,7 @@ window.addEventListener("scroll", () => {
 const modal = document.querySelector('.modal');
 const btnRegion = document.querySelector('.region');
 const btnClose = document.querySelector('#closeModal');
+const overlay = document.querySelector('#overlay');
 
 btnRegion.addEventListener('click',()=>{
     btnRegion.classList.toggle('active')
@@ -33,14 +34,23 @@ btnRegion.addEventListener('click',()=>{
 })
 
 const openModalHandler = () =>{
-    btnRegion.classList.toggle('active')
-    btnRegion.nextElementSibling.classList.toggle('toggle')
+    btnRegion.classList.toggle('active');
+    btnRegion.nextElementSibling.classList.toggle('toggle');
+    overlay.classList.toggle('active');
 }
 
 const closeModalHandler = () =>{
     modal.classList.toggle('active');
-    btnRegion.classList.toggle('active')
+    btnRegion.classList.toggle('active');
+    overlay.classList.toggle('active');
 }
 
-btnClose.addEventListener('click',closeModalHandler)
+const closeOverlay = () =>{
+    closeModalHandler();
+}
+
+btnClose.addEventListener('click',closeModalHandler);
 btnRegion.addEventListener('click',openModalHandler);
+overlay.addEventListener('click',closeOverlay);
+
+
