@@ -157,6 +157,7 @@
 
 .bring{
     background: $clr-fwhite;
+    padding: 2.5rem 0;
 
     &__wrapper{
         background: $clr-fwhite;
@@ -250,13 +251,113 @@
 
     &__items{
         h1{
-
+            font-size: 3rem;
+            font-weight: 700;
+            margin: .5rem 0;
         }
         p{
-
+            margin: .5rem 0;
         }
         a{
+            margin: .5rem 0;
+            width: 45rem;
+        }
+    }
 
+    @include mediaQuery($break-lg){
+        &__items{
+            h1{
+                font-size: 4rem;
+                margin: .5rem 0;
+            }
+            p{
+                margin: .5rem 0;
+            }
+            a{
+                margin: .5rem 0;
+                margin-top: 2.5rem;
+                width: unset;
+                padding: 1.5rem 3rem;
+            }
+        }
+    }
+
+}
+
+/*PERCENT*/
+
+.percent{
+    &__wrapper{
+        display: grid;
+        gap: 5rem;
+        justify-content: center;
+        
+        .percent__items{
+            h3{
+                font-size: 5rem;
+                color: $clr-primary;
+                text-align: center;
+            }
+            p{
+                width: 20rem;
+                text-align: center;
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            display: flex;
+            flex-direction: row;
+            gap: 20rem;
+            justify-content: center;
+            
+            .percent__items{
+                h3{
+                    font-size: 6rem;
+                    color: $clr-primary;
+                    text-align: center;
+                }
+                p{
+                    width: 20rem;
+                    text-align: unset;
+                }
+            }
+        }
+    }
+}
+
+/*IBM*/
+
+.ibm{
+    margin: 5rem 0;
+    &__wrapper{
+        .ibm__items{
+            video{
+                @include imgFit(100%, 100%);
+                transform: translateX(-1.5rem);
+                border-top-right-radius: 15rem;
+                border-bottom-right-radius: 15rem;
+                margin: 1.5rem 0;
+            }
+        }
+        .ibm__text{
+            margin: 0 1rem;
+            h3{
+                font-size: 2.3rem;
+                font-weight: 100;
+                font-style: italic;
+                margin: 1.5rem 0;
+            }
+            p{
+                font-weight: bold;
+            }
+            &:last-child{
+                font-weight: 100;
+            }
+            a{
+
+            }
         }
     }
 }
@@ -265,6 +366,12 @@
 
 .work{
     background: $clr-fwhite;
+    &__wrapper{
+        h1{
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+    }
     .slider__item{
         height: 40rem;
         width: 25rem;
@@ -280,7 +387,7 @@
             width: 100%;
         }
         .slider__actions{
-            margin-top: 13rem;
+            
         }
     }
 
