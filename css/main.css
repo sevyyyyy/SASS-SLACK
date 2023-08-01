@@ -1285,20 +1285,25 @@ body {
   margin: 1.5rem 0;
 }
 .ibm__wrapper .ibm__text {
-  margin: 0 1rem;
+  margin: 2rem 0;
 }
 .ibm__wrapper .ibm__text h3 {
   font-size: 2.3rem;
   font-weight: 100;
   font-style: italic;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
-.ibm__wrapper .ibm__text p {
+.ibm__wrapper .ibm__text h2 {
   font-weight: bold;
+  font-size: 1.7rem;
 }
-.ibm__wrapper .ibm__text:last-child {
-  font-weight: 100;
+.ibm__wrapper .ibm__text h2 p {
+  margin: 2rem 0;
 }
+.ibm__wrapper .ibm__text a {
+  color: #4285f4;
+}
+
 /*WORK SECTION*/
 .work {
   background: hsl(34, 42%, 93%);
