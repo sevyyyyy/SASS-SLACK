@@ -1302,6 +1302,57 @@ body {
 }
 .ibm__wrapper .ibm__text a {
   color: #4285f4;
+  margin: 2rem 0;
+}
+.ibm h5 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 940px) {
+  .ibm__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    gap: 5rem;
+  }
+  .ibm__wrapper .ibm__items video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: unset;
+    border-top-right-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+    margin: 1.5rem 0;
+  }
+  .ibm__wrapper .ibm__text {
+    margin: 2rem 0;
+  }
+  .ibm__wrapper .ibm__text h3 {
+    font-size: 2.3rem;
+    font-weight: 100;
+    font-style: italic;
+    margin: 2rem 0;
+  }
+  .ibm__wrapper .ibm__text h2 {
+    font-weight: bold;
+    font-size: 1.7rem;
+  }
+  .ibm__wrapper .ibm__text h2 p {
+    margin: 2rem 0;
+  }
+  .ibm__wrapper .ibm__text a {
+    color: #4285f4;
+    margin: 2rem 0;
+    margin-top: 5rem;
+  }
+  .ibm h5 {
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+  }
 }
 
 /*WORK SECTION*/
@@ -1326,6 +1377,19 @@ body {
 }
 .work .slider__item img {
   width: 100%;
+}
+.work .slider__item .slider__actions {
+  position: absolute;
+  bottom: 0;
+  color: #4285f4;
+  padding: 1rem;
+}
+.work .slider__item .slider__actions a {
+  color: #4285f4;
+  padding-right: 12.5rem;
+}
+.work .slider__item .slider__actions:nth-child(2) a {
+  padding-right: 11rem;
 }
 .work .tns-controls,
 .work button[data-action=stop] {
@@ -1368,4 +1432,48 @@ body {
 }
 .work .tns-nav button.tns-nav-active {
   background: hsl(293.51, 54.41%, 26.67%);
+}
+
+/*ellipse*/
+.ellipse {
+  background: #4a154b;
+  -webkit-clip-path: ellipse(100% 100% at center top);
+          clip-path: ellipse(100% 100% at center top);
+  padding: 5rem 0;
+}
+.ellipse__wrapper .ellipse__text h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  text-align: center;
+}
+.ellipse__wrapper .ellipse__buttons ul li {
+  text-align: center;
+  margin: 1rem 0;
+}
+.ellipse__wrapper .ellipse__buttons ul li a {
+  width: 40rem;
+}
+@media screen and (min-width: 940px) {
+  .ellipse {
+    -webkit-clip-path: ellipse(75% 100% at center top);
+            clip-path: ellipse(75% 100% at center top);
+    padding: 10rem 0;
+  }
+  .ellipse__wrapper .ellipse__text h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 4.5rem;
+    text-align: center;
+  }
+  .ellipse__wrapper .ellipse__buttons ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .ellipse__wrapper .ellipse__buttons ul li {
+    text-align: center;
+    margin: 1rem 0;
+  }
+  .ellipse__wrapper .ellipse__buttons ul li a {
+    width: unset;
+  }
 }/*# sourceMappingURL=main.css.map */
